@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casio Scientific Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calc">
+    <!-- Top Bar -->
+    <div class="topbar">
+      <div class="brand">CASIO <span>fx-991MS</span></div>
+      <div class="badges">
+        <span class="badge shift">SHIFT</span>
+        <span class="badge alpha">ALPHA</span>
+        <span class="badge mode">DEG</span>
+      </div>
+    </div>
+
+    <!-- Display -->
+    <div class="lcd">
+      <div id="expr" class="expr"></div>
+      <div id="result" class="result">0</div>
+      <div class="status"><span id="status-angle">Angle: DEG</span></div>
+    </div>
+
+    <!-- Keys -->
+    <div class="keys" id="keys">
+
+      <!-- Row 1 -->
+      <button class="key k-ctrl" data-action="shift">SHIFT</button>
+      <button class="key k-ctrl" data-action="alpha">ALPHA</button>
+      <button class="key k-ctrl" data-text="CALC">CALC</button>
+      <button class="key k-ctrl" data-text="∫(">∫dx</button>
+      <button class="key k-ctrl" data-text="d/dx(">d/dx</button>
+      <button class="key k-ctrl" data-action="angle">DEG</button>
+
+      <!-- Row 2 -->
+      <button class="key k-fn" data-text="√(" data-shift="x²" data-alpha="ab/c">√</button>
+      <button class="key k-fn" data-text="x²" data-shift="√(" data-alpha="ab/c">x²</button>
+      <button class="key k-fn" data-text="^" data-shift="x³" data-alpha="x⁻¹">^</button>
+      <button class="key k-fn" data-text="log(" data-shift="10^(" data-alpha="LOGIC">log</button>
+      <button class="key k-fn" data-text="ln(" data-shift="e^(" data-alpha="ln">ln</button>
+      <button class="key k-ctrl" data-action="del">DEL</button>
+
+      <!-- Row 3 -->
+      <button class="key k-fn" data-text="hyp">hyp</button>
+      <button class="key k-fn" data-text="sin(" data-shift="asin(" data-alpha="sin⁻¹">sin</button>
+      <button class="key k-fn" data-text="cos(" data-shift="acos(" data-alpha="cos⁻¹">cos</button>
+      <button class="key k-fn" data-text="tan(" data-shift="atan(" data-alpha="tan⁻¹">tan</button>
+      <button class="key k-fn" data-text="(">(</button>
+      <button class="key k-fn" data-text=")">)</button>
+
+      <!-- Row 4 -->
+      <button class="key k-ctrl" data-action="mc">MC</button>
+      <button class="key k-ctrl" data-action="mr">MR</button>
+      <button class="key k-ctrl" data-action="mplus">M+</button>
+      <button class="key k-ctrl" data-action="mminus">M-</button>
+      <button class="key k-ctrl" data-action="ac">AC</button>
+      <button class="key k-ctrl" data-text="%">%</button>
+
+      <!-- Row 5 -->
+      <button class="key k-num" data-text="7">7</button>
+      <button class="key k-num" data-text="8">8</button>
+      <button class="key k-num" data-text="9">9</button>
+      <button class="key k-op"  data-text="÷">÷</button>
+      <button class="key k-fn"  data-text="nPr">nPr</button>
+      <button class="key k-fn"  data-text="nCr">nCr</button>
+
+      <!-- Row 6 -->
+      <button class="key k-num" data-text="4">4</button>
+      <button class="key k-num" data-text="5">5</button>
+      <button class="key k-num" data-text="6">6</button>
+      <button class="key k-op"  data-text="×">×</button>
+      <button class="key k-fn"  data-text="π">π</button>
+      <button class="key k-fn"  data-text="Ran#">Ran#</button>
+
+      <!-- Row 7 -->
+      <button class="key k-num" data-text="1">1</button>
+      <button class="key k-num" data-text="2">2</button>
+      <button class="key k-num" data-text="3">3</button>
+      <button class="key k-op"  data-text="-">−</button>
+      <button class="key k-fn"  data-text="Ans">Ans</button>
+      <button class="key k-fn"  data-text="!">n!</button>
+
+      <!-- Row 8 -->
+      <button class="key k-num span-2" data-text="0">0</button>
+      <button class="key k-ctrl" data-text=".">.</button>
+      <button class="key k-op"  data-text="+">+</button>
+      <button class="key k-op span-2" data-action="equals">=</button>
+
+    </div>
+  </div>
+
+  <script src="calculator.js"></script>
+</body>
+</html>

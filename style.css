@@ -1,0 +1,56 @@
+:root{
+  --calc:#2b2b2b;
+  --lcd:#111;
+  --lcd-text:#b2ff9e;
+  --key-num:#e6e6e6;
+  --key-fn:#4b5d78;
+  --key-ctrl:#9aa3ad;
+  --key-op:#ff9500;
+  --key-op-text:#fff;
+  --shift:#ffd54f;
+  --alpha:#ff6b6b;
+}
+
+body{
+  margin:0;
+  display:flex; justify-content:center; align-items:center;
+  height:100vh;
+  background:#1c1c1c;
+  font-family:Arial, sans-serif;
+}
+.calc{
+  width:min(440px,95vw);
+  background:var(--calc);
+  border-radius:15px;
+  padding:16px;
+  color:#fff;
+}
+.topbar{
+  display:flex; justify-content:space-between; margin-bottom:10px;
+}
+.brand{font-weight:bold}
+.badges{display:flex; gap:6px}
+.badge{padding:2px 8px; border-radius:999px; font-size:.8rem; font-weight:bold}
+.badge.shift{background:var(--shift); color:#000}
+.badge.alpha{background:var(--alpha); color:#fff}
+.badge.mode{background:#9ed1ff; color:#000}
+
+.lcd{
+  background:var(--lcd);
+  padding:12px; border-radius:8px;
+  margin-bottom:12px;
+}
+.expr{min-height:24px; font-size:1rem; font-family:monospace; color:var(--lcd-text)}
+.result{min-height:28px; font-size:1.4rem; font-family:monospace; text-align:right; color:var(--lcd-text)}
+.status{font-size:.8rem; color:#9ed1ff}
+
+.keys{display:grid; grid-template-columns:repeat(6,1fr); gap:8px}
+.key{
+  padding:12px; border:none; border-radius:6px;
+  font-weight:bold; cursor:pointer;
+}
+.k-num{background:var(--key-num)}
+.k-fn{background:var(--key-fn); color:#fff}
+.k-ctrl{background:var(--key-ctrl)}
+.k-op{background:var(--key-op); color:var(--key-op-text)}
+.span-2{grid-column:span 2}
